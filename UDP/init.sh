@@ -1,0 +1,2 @@
+export GS_PORT=123456
+export FS_PORT=789012

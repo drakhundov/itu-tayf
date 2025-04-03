@@ -33,7 +33,7 @@ void UDPCommunicator::ProcessPendingDatagrams()
         udpSocket.readDatagram(datagram.data(), datagram.size());
         Data data;
         QDataStream stream(&datagram, QIODevice::ReadOnly);
-        stream >> data.height >> data.temp >> data.pressure;
+        stream >> data.height >> data.temp >> data.pressure >> data.pitch >> data.yaw >> data.roll;
         emit DataReceived(data);
     }
 }

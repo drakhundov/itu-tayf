@@ -22,6 +22,7 @@ void CSVBackUp::BackUpData(const Data &data)
     if (!backup_f.is_open())
     {
         std::cerr << "Failed to open the backup file." << std::endl;
+        return;
     }
     backup_f << data.height << "," << data.temp << "," << data.pressure << '\n';
 }

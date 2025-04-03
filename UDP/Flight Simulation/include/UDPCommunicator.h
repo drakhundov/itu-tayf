@@ -7,12 +7,13 @@
 #include <QHostAddress>
 #include <QDataStream>
 
-#include "Data.h"
+#include "Satellite.h"
 
 class UDPCommunicator : public QObject
 {
 public:
     UDPCommunicator();
+    void SetSatellite(Satellite &);
 
 private slots:
     void CheckStatus();
@@ -22,8 +23,9 @@ private:
     QUdpSocket udpSocket;
     QTimer *timer;
     QHostAddress gsAddress;
-    void SendData(const Data&);
+    void SendData(const Data &);
     int GS_PORT;
+    Satellite *satellite;
 };
 
 #endif

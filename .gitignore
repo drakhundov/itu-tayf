@@ -1,0 +1,7 @@
+build/
+Makefile
+.vscode/
+.qmake.stash
+.DS_Store
+*.qrc
+UDP/Ground Station/backup/
